@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ربیع الاول مبارک ﷺ</title>
+<title>رمضان المبارک مبارک</title>
 
 <style>
 * {
@@ -13,264 +13,259 @@
 body {
   margin: 0;
   min-height: 100vh;
+  padding: 15px 8px;
   font-family: Arial, sans-serif;
   color: white;
   text-align: center;
-  background: linear-gradient(145deg, #003d2b, #087653, #012e24);
-  padding: 25px 12px;
+  background: linear-gradient(135deg, #00291c, #087b50, #001a12);
 }
 
-.border {
-  position: fixed;
-  inset: 7px;
-  border: 3px solid #ffd76a;
+.card {
+  position: relative;
+  max-width: 500px;
+  min-height: 600px;
+  margin: 20px auto;
+  padding: 35px 18px;
+  overflow: hidden;
+  border: 3px solid #f6d777;
   border-radius: 25px;
-  pointer-events: none;
-  box-shadow: 0 0 20px #ffd76a;
+  background: linear-gradient(160deg, #07583ceF, #00281eef);
+  box-shadow: 0 0 25px #f6d77777;
+}
+
+h1 {
+  color: #ffe38a;
+  font-size: 36px;
+  line-height: 1.7;
+  text-shadow: 0 0 15px #f6d777;
+}
+
+.moon-big {
+  font-size: 75px;
   animation: glow 2s infinite alternate;
 }
 
 @keyframes glow {
-  from { box-shadow: 0 0 10px #ffd76a; }
-  to { box-shadow: 0 0 28px #fff0a0; }
+  from { text-shadow: 0 0 8px gold; }
+  to { text-shadow: 0 0 30px gold; }
 }
 
-.moon {
-  font-size: 75px;
-  margin-top: 15px;
-  animation: float 3s infinite ease-in-out;
-}
-
-@keyframes float {
-  50% { transform: translateY(-10px); }
-}
-
-.stars {
-  color: #ffdc75;
-  font-size: 27px;
-  margin: 12px;
-  letter-spacing: 8px;
-}
-
-h1 {
-  color: #ffe28a;
-  font-size: 35px;
-  text-shadow: 0 0 15px #ffd76a;
-  line-height: 1.7;
-}
-
-.card {
-  max-width: 460px;
-  margin: 25px auto;
-  padding: 24px 18px;
-  border: 1px solid #ffdc80;
-  border-radius: 25px;
-  background: #ffffff12;
-  box-shadow: 0 0 25px #0003;
+.decor {
+  color: #ffdf7c;
+  font-size: 23px;
+  letter-spacing: 7px;
 }
 
 .message {
+  margin: 25px 0;
+  color: #fff4d0;
   font-size: 23px;
-  line-height: 2;
+  line-height: 2.1;
+  overflow-wrap: anywhere;
 }
 
-.small {
-  font-size: 17px;
-  line-height: 1.9;
-  color: #ffefbd;
-}
-
-input {
+#senderName {
+  display: block;
   width: 100%;
-  padding: 16px 12px;
-  border-radius: 14px;
-  border: 2px solid #ffe28a;
+  margin: 20px 0;
+  padding: 15px;
+  border: 2px solid #f6d777;
+  border-radius: 12px;
+  background: white;
+  color: #143d2b;
   font-size: 18px;
-  text-align: center;
-  margin: 12px 0;
-  outline: none;
+  text-align: right;
 }
 
 button {
   width: 100%;
-  padding: 17px 10px;
+  max-width: 350px;
+  margin-top: 12px;
+  padding: 15px;
   border: none;
   border-radius: 14px;
   font-size: 18px;
   font-weight: bold;
   cursor: pointer;
-  margin: 8px 0;
 }
 
-.create {
-  background: #ffda70;
-  color: #163b2a;
+.create-btn {
+  color: #173b27;
+  background: linear-gradient(90deg, #e8c45c, #fff0b0);
 }
 
-.share {
-  background: #20bf65;
+.whatsapp-btn {
   color: white;
-}
-
-#result {
-  display: none;
-  padding: 15px;
-  margin-top: 18px;
-  background: #ffffff12;
-  border: 1px solid #ffdc80;
-  border-radius: 15px;
-  line-height: 2;
-  overflow-wrap: anywhere;
+  background: #25D366;
+  box-shadow: 0 0 15px #25D36666;
 }
 
 .footer {
-  margin: 22px 0;
-  color: #ffedbb;
-  font-size: 15px;
+  margin-top: 25px;
+  color: #ffe7a1;
 }
 
-.floating {
-  position: fixed;
-  top: -30px;
-  animation: fall linear infinite;
+/* پھولوں اور ستاروں کی برسات */
+.rain {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
   pointer-events: none;
-  opacity: .8;
 }
+
+.rain span {
+  position: absolute;
+  top: -35px;
+  animation: fall 6s linear infinite;
+  font-size: 22px;
+}
+
+.rain span:nth-child(1) { left: 5%; animation-delay: 0s; }
+.rain span:nth-child(2) { left: 20%; animation-delay: 2s; }
+.rain span:nth-child(3) { left: 35%; animation-delay: 1s; }
+.rain span:nth-child(4) { left: 50%; animation-delay: 3s; }
+.rain span:nth-child(5) { left: 65%; animation-delay: 1.5s; }
+.rain span:nth-child(6) { left: 80%; animation-delay: 2.5s; }
+.rain span:nth-child(7) { left: 95%; animation-delay: 0.5s; }
 
 @keyframes fall {
-  to {
-    transform: translateY(110vh) rotate(360deg);
+  0% {
+    transform: translateY(-20px) rotate(0deg);
+    opacity: 0;
+  }
+  15% { opacity: 1; }
+  100% {
+    transform: translateY(700px) rotate(360deg);
+    opacity: 0;
   }
 }
 
+/* چاروں کونوں پر گھومتے چاند */
+.corner-moon {
+  position: absolute;
+  z-index: 2;
+  color: #ffe38a;
+  font-size: 26px;
+  text-shadow: 0 0 12px gold;
+  animation: spin 4s linear infinite;
+  pointer-events: none;
+}
+
+.top-left { top: 10px; left: 10px; }
+.top-right { top: 10px; right: 10px; }
+.bottom-left { bottom: 10px; left: 10px; }
+.bottom-right { bottom: 10px; right: 10px; }
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* اصل مواد اینیمیشن کے اوپر رہے گا */
+.content {
+  position: relative;
+  z-index: 1;
+}
 </style>
 </head>
 
 <body>
 
-<div class="border"></div>
-
-<div class="moon">🌙</div>
-
-<div class="stars">✦ ⭐ ✦ ⭐ ✦</div>
-
-<h1>ربیع الاول مبارک ﷺ</h1>
-
 <div class="card">
 
-  <div class="message">
-    💚 جشنِ آمدِ رسول ﷺ مبارک 💚
+  <div class="rain">
+    <span>🌸</span>
+    <span>⭐</span>
+    <span>✨</span>
+    <span>🌼</span>
+    <span>🌟</span>
+    <span>🌹</span>
+    <span>✦</span>
   </div>
 
-  <p class="small">
-    محبتِ رسول ﷺ ہمارے ایمان کی پہچان ہے۔
-    <br>
-    درود شریف پڑھیں اور دوسروں تک پہنچائیں۔
-  </p>
+  <div class="corner-moon top-left">☾</div>
+  <div class="corner-moon top-right">☾</div>
+  <div class="corner-moon bottom-left">☾</div>
+  <div class="corner-moon bottom-right">☾</div>
 
-  <input
-    id="sender"
-    type="text"
-    maxlength="50"
-    placeholder="اپنا نام لکھیں"
-  >
+  <div class="content">
 
-  <input
-    id="receiver"
-    type="text"
-    maxlength="50"
-    placeholder="جسے مبارک باد دینی ہے اس کا نام"
-  >
+    <div class="decor">✦ ✧ ✦ ✧ ✦</div>
 
-  <button class="create" onclick="makeGreeting()">
-    ✨ مبارک باد تیار کریں
-  </button>
+    <div class="moon-big">🌙</div>
 
-  <div id="result"></div>
+    <h1>رمضان المبارک</h1>
 
-  <button
-    class="share"
-    id="shareBtn"
-    onclick="shareGreeting()"
-    style="display:none"
-  >
-    📲 واٹس ایپ پر شیئر کریں
-  </button>
+    <div class="decor">🌟 ✨ 🌟</div>
 
-  <p class="small">
-    ﷺ درود و سلام کی کثرت کریں ﷺ
-  </p>
+    <p>اپنا نام لکھیں اور رمضان کی مبارک باد دیں:</p>
 
-</div>
+    <input
+      type="text"
+      id="senderName"
+      placeholder="مثلاً: حافظ ساجد"
+      maxlength="60"
+    >
 
-<div class="footer">
-  💚 اللہ تعالیٰ ہم سب کو محبتِ رسول ﷺ نصیب فرمائے 💚
+    <button class="create-btn" onclick="createGreeting()">
+      ✨ میری مبارک باد تیار کریں
+    </button>
+
+    <div id="greeting" class="message" style="display:none;"></div>
+
+    <button
+      id="whatsappBtn"
+      class="whatsapp-btn"
+      onclick="shareWhatsApp()"
+      style="display:none;"
+    >
+      📲 واٹس ایپ پر شیئر کریں
+    </button>
+
+    <div class="footer">
+      🌸 اللہ تعالیٰ آپ سب کو خوشیاں اور برکتیں عطا فرمائے۔ آمین 🌸
+    </div>
+
+  </div>
 </div>
 
 <script>
-let greeting = "";
+let greetingMessage = "";
 
-function makeGreeting() {
-  const sender = document.getElementById("sender").value.trim();
-  const receiver = document.getElementById("receiver").value.trim();
+function createGreeting() {
+  const name = document.getElementById("senderName").value.trim();
 
-  if (!sender) {
-    alert("براہ کرم اپنا نام لکھیں۔");
+  if (!name) {
+    alert("براہ کرم پہلے اپنا نام لکھیں۔");
     return;
   }
 
-  greeting =
-    "🌙 ربیع الاول مبارک ﷺ 🌙\n\n" +
-    (receiver ? receiver + " صاحب! " : "") +
-    "آپ کو ربیع الاول مبارک ہو۔ 💚\n\n" +
-    "اللہ تعالیٰ ہمیں نبی کریم ﷺ کی تعلیمات پر عمل کرنے کی توفیق عطا فرمائے۔ آمین 🤲\n\n" +
-    "آپ کے لیے محبت بھرا پیغام بھیجا:\n" +
-    "💚 " + sender + " 💚";
+  greetingMessage =
+    name + " کی طرف سے آپ کو اور آپ کے گھر والوں کو " +
+    "رمضان کی آمد مبارک ہو۔ 🌙✨\n\n" +
+    "اللہ تعالیٰ اس بابرکت مہینے میں آپ سب کو صحت، خوشیاں، " +
+    "رحمتیں، برکتیں اور مغفرت عطا فرمائے۔ آمین یا رب العالمین۔ 🤲💚";
 
-  const result = document.getElementById("result");
-  result.innerText = greeting;
-  result.style.display = "block";
-
-  document.getElementById("shareBtn").style.display = "block";
+  document.getElementById("greeting").innerText = greetingMessage;
+  document.getElementById("greeting").style.display = "block";
+  document.getElementById("whatsappBtn").style.display = "block";
 }
 
-function shareGreeting() {
-  if (!greeting) {
-    alert("پہلے مبارک باد تیار کریں۔");
+function shareWhatsApp() {
+  if (!greetingMessage) {
+    alert("پہلے اپنا نام لکھ کر مبارک باد تیار کریں۔");
     return;
   }
 
-  const url =
-    "https://wa.me/?text=" + encodeURIComponent(greeting);
+  const url = "https://wa.me/?text=" +
+    encodeURIComponent(greetingMessage);
 
   window.open(url, "_blank");
-}
-
-// خوبصورت گرتے ہوئے ستارے
-for (let i = 0; i < 16; i++) {
-  const star = document.createElement("div");
-  star.className = "floating";
-  star.innerText = ["✨", "⭐", "🌟"][i % 3];
-  star.style.left = Math.random() * 100 + "vw";
-  star.style.animationDuration = (5 + Math.random() * 8) + "s";
-  star.style.animationDelay = Math.random() * 8 + "s";
-  star.style.fontSize = (12 + Math.random() * 15) + "px";
-  document.body.appendChild(star);
 }
 </script>
 
 </body>
 </html>
-<style>
-.whatsapp-btn {
-  background: #25D366;
-  color: white;
-  padding: 14px 22px;
-  border: none;
-  border-radius: 12px;
-  font-size: 18px;
-  font-weight: bold;
-  cursor: pointer;
-  margin-top: 15px;
-}
-</style>
