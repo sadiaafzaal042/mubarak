@@ -1,84 +1,270 @@
-<!DOCTYPE html><html lang="ur" dir="rtl">
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>عید مبارک 🌙</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>مبارک باد بھیجیں 🌙</title>
+
 <style>
 *{box-sizing:border-box}
+
 body{
-margin:0;min-height:100vh;text-align:center;
-font-family:Arial,sans-serif;color:white;
-background:linear-gradient(135deg,#061b35,#123d64,#30134d);
-padding:25px 15px;overflow-x:hidden
+ margin:0;
+ padding:20px 12px;
+ font-family:Arial,sans-serif;
+ text-align:center;
+ color:white;
+ background:linear-gradient(145deg,#06152e,#17476a,#34134d);
+ min-height:100vh;
 }
-.border{
-position:fixed;inset:7px;border:3px solid #ffd76a;
-border-radius:20px;pointer-events:none;
-box-shadow:0 0 18px #ffd76a;animation:glow 2s infinite alternate
+
+.frame{
+ max-width:500px;
+ margin:auto;
+ padding:18px;
+ border:3px solid #ffdc77;
+ border-radius:25px;
+ box-shadow:0 0 22px #ffdc77;
 }
-@keyframes glow{to{box-shadow:0 0 30px #ff9f43}}
-.moon{font-size:75px;margin-top:25px}
-h1{font-size:42px;color:#ffe28a;text-shadow:0 0 18px #ffc400}
+
+h1{
+ color:#ffe58b;
+ font-size:36px;
+ text-shadow:0 0 15px #ffd34d;
+}
+
+.moon{
+ font-size:65px;
+ animation:float 3s ease-in-out infinite;
+}
+
+@keyframes float{
+ 50%{transform:translateY(-8px)}
+}
+
 .card{
-max-width:440px;margin:20px auto;padding:25px 18px;
-border:1px solid #ffdc80;border-radius:22px;
-background:#ffffff12;box-shadow:0 0 25px #0005
+ margin:20px 0;
+ padding:20px 14px;
+ border:1px solid #ffe58b;
+ border-radius:20px;
+ background:#ffffff12;
 }
-input{
-width:100%;padding:15px;border-radius:12px;
-border:2px solid #ffe28a;font-size:18px;text-align:center;
-margin:12px 0
+
+select,input,button{
+ display:block;
+ width:100%;
+ padding:14px;
+ margin:12px 0;
+ border-radius:12px;
+ font-size:17px;
 }
+
+select,input{
+ border:2px solid #ffdf80;
+ background:white;
+ color:#222;
+}
+
 button{
-width:100%;padding:14px;margin-top:10px;
-border:0;border-radius:12px;font-size:18px;
-font-weight:bold;cursor:pointer
+ border:none;
+ font-weight:bold;
+ cursor:pointer;
 }
-.create{background:#ffd76a;color:#17233a}
-.share{background:#20bd68;color:white}
-#message{font-size:24px;line-height:1.8;color:#fff0b4}
-.star{font-size:24px;animation:twinkle 1.5s infinite alternate}
-@keyframes twinkle{to{opacity:.35;transform:scale(1.2)}}
-.small{font-size:14px;color:#ddd;line-height:1.8}
+
+.make{background:#ffda70;color:#17233a}
+.share{background:#19bd69;color:white}
+
+#message{
+ font-size:25px;
+ line-height:1.9;
+ color:#ffe8a4;
+ overflow-wrap:anywhere;
+}
+
+.ad{
+ margin:18px 0;
+ min-height:75px;
+ padding:14px 8px;
+ border:1px dashed #b7b7b7;
+ border-radius:10px;
+ color:#ddd;
+ background:#ffffff09;
+ font-size:13px;
+}
+
+.ad small{display:block;margin-top:8px}
+
+.footer{font-size:14px;color:#ddd;line-height:1.9}
+
 </style>
 </head>
+
 <body>
-<div class="border"></div>
+<div class="frame">
+
 <div class="moon">🌙</div>
-<div class="star">✨ ⭐ ✨ ⭐ ✨</div>
-<h1>عید مبارک</h1>
-<div class="card">
-<div id="message">آپ کو اور آپ کے گھر والوں کو عید مبارک!</div>
-<p>💖 اپنی طرف سے مبارک باد بھیجیں 💖</p>
-<input id="name" maxlength="35" placeholder="یہاں اپنا نام لکھیں">
-<button class="create" onclick="makeWish()">مبارک باد تیار کریں 🎉</button>
-<button class="share" onclick="shareWish()">واٹس ایپ پر شیئر کریں 📲</button>
-<p class="small">خوشیاں بانٹیں، محبت بڑھائیں ❤️</p>
+<div>✨ ⭐ ✨ ⭐ ✨</div>
+
+<h1 id="heading">عید مبارک</h1>
+
+<!-- اشتہار نمبر 1: اوپر -->
+<div class="ad">
+ اشتہار
+ <small>یہاں بعد میں منظور شدہ اشتہار دکھایا جا سکتا ہے۔</small>
 </div>
-<div class="star">🌟 ✨ 🌟 ✨ 🌟</div>
+
+<div class="card">
+
+<label for="festival">اپنا تہوار منتخب کریں</label>
+
+<select id="festival" onchange="changeFestival()">
+ <option value="eid">عید مبارک</option>
+ <option value="ramadan">رمضان مبارک</option>
+ <option value="chaand">چاند رات مبارک</option>
+ <option value="rabi">12 ربیع الاول مبارک</option>
+</select>
+
+<div id="message">
+آپ کو اور آپ کے گھر والوں کو عید مبارک! 🎉
+</div>
+
+<p>💖 اپنی طرف سے مبارک باد بھیجیں 💖</p>
+
+<input id="name" maxlength="35"
+ placeholder="یہاں اپنا نام لکھیں"
+ autocomplete="name">
+
+<button class="make" onclick="makeWish()">
+🎉 مبارک باد تیار کریں
+</button>
+
+<button class="share" onclick="shareWish()">
+📲 واٹس ایپ پر شیئر کریں
+</button>
+
+</div>
+
+<!-- اشتہار نمبر 2: درمیان -->
+<div class="ad">
+ اشتہار
+ <small>یہاں بعد میں منظور شدہ اشتہار دکھایا جا سکتا ہے۔</small>
+</div>
+
+<div class="footer">
+خوشیاں بانٹیں، محبت بڑھائیں ❤️
+<br>
+اپنے دوستوں اور گھر والوں کو بھی مبارک باد بھیجیں۔
+</div>
+
+<!-- اشتہار نمبر 3: نیچے -->
+<div class="ad">
+ اشتہار
+ <small>یہاں بعد میں منظور شدہ اشتہار دکھایا جا سکتا ہے۔</small>
+</div>
+
+</div>
+
 <script>
+const festivals = {
+ eid: {
+  title:"عید مبارک",
+  text:"آپ کو اور آپ کے گھر والوں کو عید مبارک! 🎉",
+  emoji:"🌙🎉"
+ },
+ ramadan: {
+  title:"رمضان مبارک",
+  text:"اللہ آپ کے رمضان کو رحمتوں اور برکتوں سے بھر دے۔",
+  emoji:"🌙🤲"
+ },
+ chaand: {
+  title:"چاند رات مبارک",
+  text:"آپ کو چاند رات کی خوشیاں بہت بہت مبارک ہوں! ✨",
+  emoji:"🌙✨"
+ },
+ rabi: {
+  title:"12 ربیع الاول مبارک",
+  text:"آپ کو 12 ربیع الاول مبارک ہو۔ درود و سلام کی کثرت کریں۔",
+  emoji:"🕌💚"
+ }
+};
+
+function currentFestival(){
+ return festivals[document.getElementById("festival").value];
+}
+
 function makeWish(){
- const name=document.getElementById('name').value.trim();
- if(!name){alert('پہلے اپنا نام لکھیں');return}
- document.getElementById('message').textContent=
- name+' کی طرف سے آپ کو عید مبارک! 🌙🎉';
+ const name=document.getElementById("name").value.trim();
+
+ if(!name){
+  alert("پہلے اپنا نام لکھیں۔");
+  return;
+ }
+
+ const f=currentFestival();
+
+ document.getElementById("message").textContent =
+ name+" کی طرف سے "+f.title+"! "+f.emoji;
+
+ document.getElementById("heading").textContent=f.title;
+
  const url=new URL(location.href);
- url.searchParams.set('name',name);
- history.replaceState(null,'',url);
+ url.searchParams.set("name",name);
+ url.searchParams.set("festival",
+  document.getElementById("festival").value);
+
+ history.replaceState(null,"",url);
 }
+
+function changeFestival(){
+ const f=currentFestival();
+ document.getElementById("heading").textContent=f.title;
+ document.getElementById("message").textContent=f.text;
+
+ const url=new URL(location.href);
+ url.searchParams.set("festival",
+  document.getElementById("festival").value);
+ url.searchParams.delete("name");
+ history.replaceState(null,"",url);
+}
+
 function shareWish(){
- const name=document.getElementById('name').value.trim();
- if(!name){alert('پہلے اپنا نام لکھیں');return}
+ const name=document.getElementById("name").value.trim();
+
+ if(!name){
+  alert("پہلے اپنا نام لکھیں۔");
+  return;
+ }
+
+ const f=currentFestival();
  const url=new URL(location.href);
- url.searchParams.set('name',name);
- const text=name+' کی طرف سے آپ کو عید مبارک! 🌙🎉\n'+url.href;
- window.open('https://wa.me/?text='+encodeURIComponent(text),'_blank');
+ url.searchParams.set("name",name);
+ url.searchParams.set("festival",
+  document.getElementById("festival").value);
+
+ const text=name+" کی طرف سے "+f.title+
+  "! "+f.emoji+"\nیہ مبارک باد کھولیں:\n"+url.href;
+
+ window.open(
+  "https://wa.me/?text="+encodeURIComponent(text),
+  "_blank"
+ );
 }
-const sender=new URLSearchParams(location.search).get('name');
+
+const params=new URLSearchParams(location.search);
+const sender=params.get("name");
+const selected=params.get("festival");
+
+if(selected && festivals[selected]){
+ document.getElementById("festival").value=selected;
+ changeFestival();
+}
+
 if(sender){
- document.getElementById('message').textContent=
- sender+' کی طرف سے آپ کو عید مبارک! 🌙🎉';
+ document.getElementById("message").textContent=
+  sender+" کی طرف سے "+currentFestival().title+
+  "! "+currentFestival().emoji;
 }
 </script>
+
 </body>
 </html>
