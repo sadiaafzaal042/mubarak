@@ -3,165 +3,107 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>آمدِ مصطفیٰ ﷺ — مبارک پوسٹر بنائیں</title>
+<title>تصویر کا بیک گراؤنڈ ریموو کریں</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&display=swap');
 *{box-sizing:border-box}
-:root{--gold:#f4d58a;--green:#073b31;--deep:#021d19}
-body{margin:0;padding:16px 10px 28px;background:radial-gradient(circle at top,#176c55,#032821 72%);color:#fff8e7;font-family:'Noto Nastaliq Urdu',serif}
-.wrap{max-width:600px;margin:auto}
-header{text-align:center;margin-bottom:12px}
-header h1{color:var(--gold);font-size:clamp(22px,6vw,32px);margin:0;line-height:1.9}
-header p{font-size:13px;margin:0;color:#e8dfc5}
-.poster{position:relative;overflow:hidden;min-height:590px;padding:18px 14px 22px;border:3px solid var(--gold);border-radius:24px;background:
-radial-gradient(ellipse at 70% 40%,rgba(19,110,82,.85),transparent 48%),
-linear-gradient(135deg,#064c3c,#01241e 60%,#0b5540);box-shadow:0 12px 30px #00110eaa,inset 0 0 0 5px #f4d58a22}
-.poster:before{content:"✦ ❈ ✦ ❈ ✦";position:absolute;top:5px;right:0;left:0;text-align:center;color:#f4d58a99;letter-spacing:7px}
-.poster:after{content:"✦ ❈ ✦ ❈ ✦";position:absolute;bottom:5px;right:0;left:0;text-align:center;color:#f4d58a99;letter-spacing:7px}
-.crescent{font-family:serif;text-align:center;color:var(--gold);font-size:43px;line-height:1.1;margin-top:10px;text-shadow:0 0 15px #f4d58a66}
-.bismillah{text-align:center;color:#fff1c8;font-size:15px;margin:2px 0 12px}
-.layout{display:flex;align-items:center;gap:12px;direction:rtl;margin-top:12px}
-.photoSide{width:44%;flex-shrink:0;min-height:270px;display:flex;align-items:center;justify-content:center}
-.photoFrame{width:100%;height:270px;position:relative;border:2px solid var(--gold);border-radius:18px;background:linear-gradient(145deg,#0a624b,#022820);box-shadow:0 0 20px #f4d58a22;display:flex;align-items:center;justify-content:center;overflow:hidden}
-#cutout{width:100%;height:100%;object-fit:contain;display:none;filter:drop-shadow(0 5px 6px #001b15aa)}
-#placeholder{padding:12px;text-align:center;color:#f4d58a;font-size:14px;line-height:2}
-.textSide{flex:1;text-align:center;min-width:0}
-.bigText{font-size:clamp(24px,7vw,42px);font-weight:700;line-height:1.9;color:var(--gold);text-shadow:0 3px 0 #543c10,0 0 16px #f5d58b33}
-.subText{font-size:clamp(14px,4vw,20px);line-height:2;color:#fff5d7}
-.divider{color:var(--gold);letter-spacing:4px;margin:8px 0}
-.poem{text-align:center;font-size:15px;line-height:2.25;color:#fff4d4;margin:17px 2px 6px}
-.signature{text-align:center;font-size:18px;color:var(--gold);margin-top:7px}
-.form{margin-top:15px;padding:14px;border:1px solid #c7a75b;border-radius:16px;background:#ffffff0b}
-label{display:block;font-size:15px;margin:4px 0 6px}
-input[type=file],input[type=text]{width:100%;padding:11px;border-radius:10px;border:1px solid #d8c17f;background:#fffdf3;color:#153c31;font:15px Arial,sans-serif;margin-bottom:10px}
-.btn{width:100%;border:0;border-radius:11px;padding:12px;margin-top:8px;font:700 15px 'Noto Nastaliq Urdu',serif;cursor:pointer}
-.primary{background:linear-gradient(135deg,#ffefb9,#d8a73f);color:#173b30}
-.secondary{background:#f9f2dc;color:#174536}
-.wa{background:#1fbd63;color:white}
-.status{font-size:12px;line-height:1.8;color:#f4e6be;margin:8px 0;min-height:22px}
-.note{font:12px/1.8 Arial,sans-serif;color:#e0d7b9;text-align:center;margin-top:12px}
-@media(max-width:390px){.poster{padding:17px 9px 22px;min-height:530px}.layout{gap:8px}.photoSide{width:42%}.photoFrame{height:230px}.photoSide{min-height:230px}.poem{font-size:13px}.bigText{font-size:25px}}
+body{margin:0;padding:20px 12px;background:linear-gradient(145deg,#edf5ff,#f8fbff);color:#18324a;font-family:'Noto Nastaliq Urdu',serif}
+main{max-width:560px;margin:auto}
+h1{text-align:center;font-size:clamp(22px,6vw,32px);color:#1557a6;margin:0 0 8px}
+.intro{text-align:center;font-size:14px;line-height:2;color:#50677d;margin:0 0 18px}
+.box{background:#fff;border:1px solid #d7e3f1;border-radius:20px;padding:18px;box-shadow:0 10px 28px #193d5c12}
+.upload{display:block;text-align:center;border:2px dashed #8ab6e8;border-radius:15px;padding:22px 12px;background:#f5faff;color:#1557a6;cursor:pointer;line-height:2}
+.upload strong{display:block;font-size:18px}
+input[type=file]{position:absolute;width:1px;height:1px;opacity:0;pointer-events:none}
+button{width:100%;border:0;border-radius:12px;padding:13px 10px;margin-top:12px;font:700 16px 'Noto Nastaliq Urdu',serif;cursor:pointer}
+.remove{background:#1768c4;color:white}
+.download{background:#e3f2e8;color:#14613b}
+button:disabled{opacity:.5;cursor:not-allowed}
+.previewWrap{margin-top:16px}
+.previewTitle{font-size:15px;margin-bottom:8px}
+.preview{min-height:230px;border:1px solid #d5deea;border-radius:14px;overflow:hidden;display:flex;align-items:center;justify-content:center;background-color:#fff;background-image:linear-gradient(45deg,#e8edf3 25%,transparent 25%),linear-gradient(-45deg,#e8edf3 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#e8edf3 75%),linear-gradient(-45deg,transparent 75%,#e8edf3 75%);background-size:22px 22px;background-position:0 0,0 11px,11px -11px,-11px 0}
+.preview img{display:block;max-width:100%;max-height:460px;object-fit:contain}
+.empty{padding:30px 15px;text-align:center;color:#73869a;font-size:14px;line-height:2}
+.status{font-size:13px;line-height:2;color:#345b7a;margin-top:10px;min-height:25px}
+.note{font:12px/1.8 Arial,sans-serif;color:#62778b;margin:14px 2px 0;text-align:center}
 </style>
 </head>
 <body>
-<div class="wrap">
-<header><h1>آمدِ مصطفیٰ ﷺ مبارک</h1><p>اپنی تصویر لگائیں اور خوبصورت اسلامی پوسٹر بنائیں</p></header>
-<section class="poster" id="poster">
-  <div class="crescent">☾</div>
-  <div class="bismillah">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ</div>
-  <div class="layout">
-    <div class="photoSide">
-      <div class="photoFrame">
-        <img id="cutout" alt="پس منظر ہٹائی گئی تصویر">
-        <div id="placeholder">آپ کی تصویر<br>یہاں نظر آئے گی</div>
-      </div>
-    </div>
-    <div class="textSide">
-      <div class="bigText">آمدِ<br>مصطفیٰ ﷺ</div>
-      <div class="subText">مرحبا یا رسول اللہ ﷺ</div>
-      <div class="divider">✦ ❈ ✦</div>
-      <div class="subText">12 ربیع الاول مبارک</div>
-    </div>
-  </div>
-  <div class="poem">وہ نبیوں میں رحمت لقب پانے والا<br>مرادیں غریبوں کی بر لانے والا ﷺ</div>
-  <div class="signature" id="signature">منجانب: اہلیانِ محلہ</div>
-</section>
-
-<section class="form">
-<label for="photo">📷 اپنی تصویر منتخب کریں</label>
-<input id="photo" type="file" accept="image/*">
-<label for="name">✍️ نام یا محلے کا نام (اختیاری)</label>
-<input id="name" type="text" maxlength="60" placeholder="مثلاً: اہلیانِ محلہ مدنی">
-<button class="btn primary" id="removeBtn">✨ تصویر کا بیک گراؤنڈ ہٹائیں</button>
-<button class="btn secondary" id="saveBtn">⬇️ پوسٹر HD سائز میں محفوظ کریں</button>
-<button class="btn wa" id="shareBtn">📲 واٹس ایپ پر لنک شیئر کریں</button>
-<div class="status" id="status" aria-live="polite">تصویر منتخب کریں، پھر بیک گراؤنڈ ہٹانے والا بٹن دبائیں۔ پہلی مرتبہ AI ماڈل لوڈ ہونے میں وقت لگ سکتا ہے۔</div>
-</section>
-<p class="note">اہم: خودکار بیک گراؤنڈ ریموول کے لیے انٹرنیٹ درکار ہے۔ یہ مفت براؤزر AI لائبریری استعمال کرنے کی کوشش کرتا ہے؛ ہر موبائل پر رفتار مختلف ہو سکتی ہے۔ محفوظ کرنے پر تصویر بڑے سائز میں برآمد ہوگی، مگر یہ مکمل AI HD enhancement نہیں ہے۔</p>
+<main>
+<h1>تصویر کا بیک گراؤنڈ ریموو کریں</h1>
+<p class="intro">اپنی تصویر اپ لوڈ کریں، بیک گراؤنڈ ہٹائیں اور شفاف PNG فائل ڈاؤن لوڈ کریں۔</p>
+<section class="box">
+<label class="upload" for="fileInput">
+  <strong>📷 تصویر منتخب کریں</strong>
+  <span>یہاں ٹیپ کریں اور گیلری سے تصویر چنیں</span>
+</label>
+<input id="fileInput" type="file" accept="image/png,image/jpeg,image/webp">
+<button id="removeBtn" class="remove" disabled>✂️ بیک گراؤنڈ ریموو کریں</button>
+<div class="previewWrap">
+<div class="previewTitle">نتیجہ:</div>
+<div class="preview" id="preview"><div class="empty" id="empty">آپ کی تصویر کا نتیجہ یہاں نظر آئے گا۔</div></div>
 </div>
-
+<button id="downloadBtn" class="download" disabled>⬇️ تصویر ڈاؤن لوڈ کریں</button>
+<div class="status" id="status" aria-live="polite">پہلے تصویر منتخب کریں۔</div>
+</section>
+<p class="note">یہ ٹول براؤزر میں AI ماڈل لوڈ کرنے کی کوشش کرتا ہے۔ پہلی بار انٹرنیٹ اور ماڈل ڈاؤن لوڈ ہونے کے لیے کچھ وقت درکار ہو سکتا ہے۔ تصویر منتخب کرنے سے پہلے اسے ویب سائٹ پر اپ لوڈ نہیں کیا جاتا؛ بیک گراؤنڈ ریموو کرنے کا عمل آپ کے براؤزر میں چلانے کی کوشش کی جاتی ہے۔</p>
+</main>
 <script type="module">
-const photoInput=document.getElementById('photo');
-const cutout=document.getElementById('cutout');
-const placeholder=document.getElementById('placeholder');
+const fileInput=document.getElementById('fileInput');
+const removeBtn=document.getElementById('removeBtn');
+const downloadBtn=document.getElementById('downloadBtn');
+const preview=document.getElementById('preview');
+const empty=document.getElementById('empty');
 const status=document.getElementById('status');
-const nameInput=document.getElementById('name');
-let originalFile=null, transparentBlob=null, modulePromise=null;
+let selectedFile=null, outputBlob=null, outputUrl=null, modulePromise=null;
 
-photoInput.addEventListener('change',()=>{
-  originalFile=photoInput.files?.[0]||null; transparentBlob=null;
-  if(!originalFile)return;
-  if(!originalFile.type.startsWith('image/')){status.textContent='براہ کرم تصویر منتخب کریں۔';return;}
-  const url=URL.createObjectURL(originalFile);
-  cutout.src=url;cutout.style.display='block';cutout.style.objectFit='contain';placeholder.style.display='none';
-  status.textContent='تصویر لگ گئی ہے۔ بہتر نتیجے کے لیے بیک گراؤنڈ ہٹانے والا بٹن دبائیں۔';
+fileInput.addEventListener('change',()=>{
+  selectedFile=fileInput.files?.[0]||null;
+  outputBlob=null;
+  downloadBtn.disabled=true;
+  removeBtn.disabled=!selectedFile;
+  if(outputUrl){URL.revokeObjectURL(outputUrl);outputUrl=null;}
+  preview.querySelectorAll('img').forEach(img=>img.remove());
+  if(!selectedFile){empty.style.display='block';status.textContent='پہلے تصویر منتخب کریں۔';return;}
+  if(!selectedFile.type.startsWith('image/')){selectedFile=null;removeBtn.disabled=true;status.textContent='براہ کرم JPG، PNG یا WebP تصویر منتخب کریں۔';return;}
+  empty.style.display='none';
+  const img=document.createElement('img');
+  img.alt='منتخب کردہ تصویر';
+  img.src=URL.createObjectURL(selectedFile);
+  preview.appendChild(img);
+  status.textContent='تصویر منتخب ہو گئی ہے۔ اب بیک گراؤنڈ ریموو کریں۔';
 });
-nameInput.addEventListener('input',()=>{
-  const n=nameInput.value.trim();
-  document.getElementById('signature').textContent=n?'منجانب: '+n:'منجانب: اہلیانِ محلہ';
-});
-document.getElementById('removeBtn').addEventListener('click',async()=>{
-  if(!originalFile){alert('پہلے اپنی تصویر منتخب کریں۔');return;}
+
+removeBtn.addEventListener('click',async()=>{
+  if(!selectedFile)return;
+  removeBtn.disabled=true;downloadBtn.disabled=true;
+  status.textContent='AI ماڈل لوڈ ہو رہا ہے۔ پہلی مرتبہ اس میں کچھ وقت لگ سکتا ہے…';
   try{
-    status.textContent='AI بیک گراؤنڈ ریموول ماڈل لوڈ ہو رہا ہے؛ پہلی بار کچھ وقت لگ سکتا ہے…';
     if(!modulePromise) modulePromise=import('https://esm.sh/@imgly/background-removal@1.5.5');
-    const mod=await modulePromise;
-    status.textContent='تصویر کا بیک گراؤنڈ ہٹایا جا رہا ہے… براہ کرم انتظار کریں۔';
-    transparentBlob=await mod.removeBackground(originalFile,{output:{format:'image/png'}});
-    const url=URL.createObjectURL(transparentBlob);
-    cutout.src=url;cutout.style.objectFit='contain';
-    status.textContent='بیک گراؤنڈ ہٹ گیا! اب پوسٹر محفوظ کر سکتے ہیں۔';
-  }catch(e){
-    status.textContent='خودکار بیک گراؤنڈ ریموول اس وقت نہیں ہو سکا۔ انٹرنیٹ چیک کریں یا کسی دوسری تصویر سے کوشش کریں۔';
-  }
+    const bgModule=await modulePromise;
+    status.textContent='بیک گراؤنڈ ہٹایا جا رہا ہے؛ تصویر کے سائز کے مطابق انتظار کریں…';
+    outputBlob=await bgModule.removeBackground(selectedFile,{output:{format:'image/png'}});
+    if(outputUrl)URL.revokeObjectURL(outputUrl);
+    outputUrl=URL.createObjectURL(outputBlob);
+    preview.querySelectorAll('img').forEach(img=>img.remove());
+    const result=document.createElement('img');
+    result.alt='بیک گراؤنڈ ریموو شدہ تصویر';
+    result.src=outputUrl;
+    preview.appendChild(result);
+    downloadBtn.disabled=false;
+    status.textContent='✅ بیک گراؤنڈ ہٹ گیا! اب PNG تصویر ڈاؤن لوڈ کریں۔';
+  }catch(err){
+    console.error(err);
+    status.textContent='بیک گراؤنڈ نہیں ہٹ سکا۔ انٹرنیٹ چیک کریں، صفحہ دوبارہ کھولیں یا چھوٹی تصویر سے کوشش کریں۔';
+  }finally{removeBtn.disabled=!selectedFile;}
 });
 
-function loadImage(src){return new Promise((resolve,reject)=>{const i=new Image();i.onload=()=>resolve(i);i.onerror=reject;i.src=src;});}
-document.getElementById('saveBtn').addEventListener('click',async()=>{
-  try{
-    status.textContent='پوسٹر تیار ہو رہا ہے…';
-    const poster=document.getElementById('poster');
-    const rect=poster.getBoundingClientRect();
-    const scale=2;
-    const canvas=document.createElement('canvas');
-    canvas.width=Math.round(rect.width*scale);canvas.height=Math.round(rect.height*scale);
-    const ctx=canvas.getContext('2d');
-    ctx.scale(scale,scale);
-    const bg=ctx.createLinearGradient(0,0,rect.width,rect.height);
-    bg.addColorStop(0,'#064c3c');bg.addColorStop(.6,'#01241e');bg.addColorStop(1,'#0b5540');
-    ctx.fillStyle=bg;ctx.fillRect(0,0,rect.width,rect.height);
-    ctx.strokeStyle='#f4d58a';ctx.lineWidth=3;ctx.strokeRect(2,2,rect.width-4,rect.height-4);
-    ctx.textAlign='center';ctx.direction='rtl';
-    const text=(t,x,y,font,color)=>{ctx.font=font;ctx.fillStyle=color;ctx.fillText(t,x,y);};
-    text('☾',rect.width/2,55,'48px serif','#f4d58a');
-    text('بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ',rect.width/2,88,'16px serif','#fff1c8');
-    const isSmall=rect.width<390, photoW=rect.width*.38, photoH=Math.min(270,rect.height*.43), photoX=rect.width*.76-photoW/2, photoY=115;
-    ctx.strokeStyle='#f4d58a';ctx.lineWidth=2;ctx.strokeRect(photoX,photoY,photoW,photoH);
-    if(cutout.src && cutout.style.display!=='none'){
-      const img=await loadImage(cutout.src);
-      const ratio=Math.min((photoW-8)/img.width,(photoH-8)/img.height);
-      const w=img.width*ratio,h=img.height*ratio;
-      ctx.drawImage(img,photoX+(photoW-w)/2,photoY+(photoH-h)/2,w,h);
-    }
-    const tx=rect.width*.34;
-    text('آمدِ',tx,160,`bold ${isSmall?27:35}px serif`,'#f4d58a');
-    text('مصطفیٰ ﷺ',tx,205,`bold ${isSmall?24:32}px serif`,'#f4d58a');
-    text('مرحبا یا رسول اللہ ﷺ',tx,245,`${isSmall?13:16}px serif`,'#fff5d7');
-    text('12 ربیع الاول مبارک',tx,285,`${isSmall?13:16}px serif`,'#fff5d7');
-    const poemY=photoY+photoH+35;
-    text('وہ نبیوں میں رحمت لقب پانے والا',rect.width/2,poemY,`${isSmall?13:16}px serif`,'#fff4d4');
-    text('مرادیں غریبوں کی بر لانے والا ﷺ',rect.width/2,poemY+30,`${isSmall?13:16}px serif`,'#fff4d4');
-    const sign=document.getElementById('signature').textContent;
-    text(sign,rect.width/2,poemY+67,`${isSmall?15:18}px serif`,'#f4d58a');
-    const a=document.createElement('a');a.download='aamad-e-mustafa-poster.png';a.href=canvas.toDataURL('image/png');a.click();
-    status.textContent='پوسٹر بڑے سائز میں محفوظ ہو گیا۔ اگر ڈاؤن لوڈ نہ ہو تو اسکرین شاٹ لے سکتے ہیں۔';
-  }catch(e){status.textContent='پوسٹر محفوظ نہیں ہو سکا؛ براہ کرم اسکرین شاٹ لیں۔';}
-});
-document.getElementById('shareBtn').addEventListener('click',()=>{
- const url=location.href.split('#')[0];
- const n=nameInput.value.trim();
- const msg='🌙 آمدِ مصطفیٰ ﷺ مبارک\n'+(n?'منجانب: '+n+'\n':'')+'اپنی تصویر لگا کر پوسٹر بنائیں:\n'+url;
- window.open('https://wa.me/?text='+encodeURIComponent(msg),'_blank','noopener');
+downloadBtn.addEventListener('click',()=>{
+  if(!outputBlob||!outputUrl)return;
+  const a=document.createElement('a');
+  a.href=outputUrl;
+  a.download='background-removed.png';
+  document.body.appendChild(a);a.click();a.remove();
 });
 </script>
 </body>
